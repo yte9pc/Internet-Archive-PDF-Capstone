@@ -35,19 +35,18 @@ production infrastructure with little modification.
 ## Description of the Data
 The Internet Archive can provide the following datasets in either complete or statistical sample
 form:
-• Our complete bibliographic catalog of roughly 100 million works, including 600+ million
-citation links, in JSON form
-3
-• Original PDF or extracted XML for 50+ million research publications. Only a subset of
+- Our complete bibliographic catalog of roughly 100 million works, including 600+ million
+citation links, in JSON form3
+- Original PDF or extracted XML for 50+ million research publications. Only a subset of
 these have been matched to a catalog entry so far
-• Samples of a corpus of hundreds of millions of unsorted, raw PDF files from our
+- Samples of a corpus of hundreds of millions of unsorted, raw PDF files from our
 historical web archives
-• Privacy restrictions vary depending on the specific dataset. Full text of Open Access
+- Privacy restrictions vary depending on the specific dataset. Full text of Open Access
 publications (either in original PDF or extracted XML format) carry the licenses of their
 original works (often as open Creative Commons licenses).
-• Bryan, the project liaison at the Internet Archive, will make sure that the data is available.
+- Bryan, the project liaison at the Internet Archive, will make sure that the data is available.
 It is already free and open.
-• Some full texts of publications have copyright restrictions (even if collected from public
+- Some full texts of publications have copyright restrictions (even if collected from public
 web archives) and required a data transfer agreement (see below for template).
-• Bibliographic metadata and other derived metadata datasets are generally publicly
+- Bibliographic metadata and other derived metadata datasets are generally publicly
 available from archive.org with the indicated license.
