@@ -22,3 +22,32 @@ HTML copies of the same document. Outcome would be identification of specific
 algorithms and tuning parameters for this task.
 - Citation graph analysis at scale (billions of edges) to identify “missing works” in our
 bibliographic catalog
+
+## Objective
+Our primary objective is to gain practical insight into which methods and tools are actually
+effective with our raw content and metadata to increase the coverage and quality of our catalog.
+Based on the outcome of this capstone project we will deploy new data processing pipelines
+(batch or streaming) as part of our production services.
+A stretch goal would be software with sufficient quality and utility to be deployed directly to our
+production infrastructure with little modification.
+
+
+## Description of the Data
+The Internet Archive can provide the following datasets in either complete or statistical sample
+form:
+• Our complete bibliographic catalog of roughly 100 million works, including 600+ million
+citation links, in JSON form
+3
+• Original PDF or extracted XML for 50+ million research publications. Only a subset of
+these have been matched to a catalog entry so far
+• Samples of a corpus of hundreds of millions of unsorted, raw PDF files from our
+historical web archives
+• Privacy restrictions vary depending on the specific dataset. Full text of Open Access
+publications (either in original PDF or extracted XML format) carry the licenses of their
+original works (often as open Creative Commons licenses).
+• Bryan, the project liaison at the Internet Archive, will make sure that the data is available.
+It is already free and open.
+• Some full texts of publications have copyright restrictions (even if collected from public
+web archives) and required a data transfer agreement (see below for template).
+• Bibliographic metadata and other derived metadata datasets are generally publicly
+available from archive.org with the indicated license.
