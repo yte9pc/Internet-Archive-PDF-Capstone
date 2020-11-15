@@ -8,20 +8,10 @@ hyperlinks (URLs) and citations. We have a specific focus on “long-tail” ope
 (which may be published in non-English language, outside North America or Europe, in nonSTEM disciplines, from small or informal publishers, not assigned DOIs, not archived in existing
 preservation networks, etc).
 
-We have several open engineering and research challenges:
-- Validating, re-training, or improving the PDF-to-XML tool we use (GROBID) to work
-with long-tail papers. GROBID uses machine learning techniques to extract structured
-content from free-form PDFs, including bibliographic metadata and reference lists
-- Implementation and training of a fast PDF identification tool, which can score files on
+Implementation and training of a fast PDF identification tool, which can score files on
 their likelihood of being a research publication, and what stage of publication (eg,
 abstract, manuscript, camera ready, OCR scan) the file represents. Ideally the tool would
 process hundreds of millions of files and be network (as opposed to CPU) bound.
-- Perform a comparative analysis of locality-sensitive hashing techniques to fingerprint and
-match research publications, agnostic of file format. For example, match PDF, XML, and
-HTML copies of the same document. Outcome would be identification of specific
-algorithms and tuning parameters for this task.
-- Citation graph analysis at scale (billions of edges) to identify “missing works” in our
-bibliographic catalog
 
 ## Objective
 Our primary objective is to gain practical insight into which methods and tools are actually
@@ -35,8 +25,6 @@ production infrastructure with little modification.
 ## Description of the Data
 The Internet Archive can provide the following datasets in either complete or statistical sample
 form:
-- Our complete bibliographic catalog of roughly 100 million works, including 600+ million
-citation links, in JSON form3
 - Original PDF or extracted XML for 50+ million research publications. Only a subset of
 these have been matched to a catalog entry so far
 - Samples of a corpus of hundreds of millions of unsorted, raw PDF files from our
@@ -46,7 +34,3 @@ publications (either in original PDF or extracted XML format) carry the licenses
 original works (often as open Creative Commons licenses).
 - Bryan, the project liaison at the Internet Archive, will make sure that the data is available.
 It is already free and open.
-- Some full texts of publications have copyright restrictions (even if collected from public
-web archives) and required a data transfer agreement (see below for template).
-- Bibliographic metadata and other derived metadata datasets are generally publicly
-available from archive.org with the indicated license.
