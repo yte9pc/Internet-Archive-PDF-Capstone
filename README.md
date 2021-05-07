@@ -20,14 +20,14 @@ process hundreds of millions of files and be network (as opposed to CPU) bound.
 
 
 ## How To
-To run the text based approach following steps
+### To run the text based approach following steps
 - First run createDB.py or download googletranslate.db
   - Recommend downloading googletranslate.db
 - Second run multiprocessingMetaText.py 
   - *python multiprocessingMetaText.py -d "path to input directory of pdfs" -o "path to output directory to store csv" -f "file name to save as (needs to be pkl)" -p "# of processes to use (or let the script decide)"*
     - This script will call metaText.py and create a dataset that is used for the model
 
-To run the image based approach following steps
+### To run the image based approach following steps
 - First run multiprocessingPDFtoImages.py
   - *python multiprocessingMetaText.py -d "path to input directory of pdfs" -o "path to output directory to store png" -p "# of processes (or let the script decide)"*
     - This script will call pdfToImage.py and create an image of the first page of each PDF
