@@ -35,7 +35,7 @@ def initalizer(imagesPaths, procs, outputPath):
 
     # Determine the number of images in each process
     print("[INFO] grabbing image paths...")
-    allImagesPaths = [os.path.join(imagesPaths, img) for img in os.listdir(imagesPaths)][:10]
+    allImagesPaths = [os.path.join(imagesPaths, img) for img in os.listdir(imagesPaths)]
     print(len(allImagesPaths))
     numImagesPerProc = len(allImagesPaths) / float(procs)
     numImagesPerProc = int(np.ceil(numImagesPerProc))
