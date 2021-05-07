@@ -63,47 +63,24 @@ if __name__ == "__main__":
     
     inputs = tf.keras.layers.Input(shape=(img_width, img_height, 3))
     x = data_augmentation(inputs)
-    
-    # Xception
-#     Xception = tf.keras.applications.Xception(weights = "imagenet", include_top=False, input_tensor=x)
    
     # VGG
-    Xception = tf.keras.applications.VGG16(weights = "imagenet", include_top=False, input_tensor=x)
+    VGG = tf.keras.applications.VGG16(weights = "imagenet", include_top=False, input_tensor=x)
     
-    for layer in Xception.layers:
+    for layer in VGG.layers:
         layer.trainable = True
-        
-    # Xception
-#     avg = keras.layers.GlobalAveragePooling2D()(Xception.output)
-#     avg = keras.layers.BatchNormalization()(avg)
-#     top_dropout_rate = 0.2
-#     avg = keras.layers.Dropout(top_dropout_rate, name="final_dropout")(avg)
-    
     
     # VGG V4
-#     avg = keras.layers.GlobalAveragePooling2D()(Xception.output)
-#     avg = keras.layers.BatchNormalization()(avg)
-#     avg = keras.layers.Dropout(0.5, name="final_dropout")(avg)
-#     avg = keras.layers.Flatten()(avg)
-#     avg = keras.layers.Dense(256, activation="relu")(avg)
-#     avg = keras.layers.Dropout(0.2)(avg)
-#     avg = keras.layers.Dense(128, activation="relu")(avg)
-    
-    avg = keras.layers.GlobalAveragePooling2D()(Xception.output)
+    avg = keras.layers.GlobalAveragePooling2D()(VGG.output)
     avg = keras.layers.BatchNormalization()(avg)
-    avg = keras.layers.Dropout(0.55, name="final_dropout")(avg)
+    avg = keras.layers.Dropout(0.5, name="final_dropout")(avg)
     avg = keras.layers.Flatten()(avg)
     avg = keras.layers.Dense(256, activation="relu")(avg)
-    avg = keras.layers.Dropout(0.25)(avg)
+    avg = keras.layers.Dropout(0.2)(avg)
     avg = keras.layers.Dense(128, activation="relu")(avg)
     
-    
     output = keras.layers.Dense(num_classes, activation="softmax")(avg)
-    model = keras.models.Model(inputs = Xception.input, outputs = output)
-    
-    # Xception
-#     optimizer = keras.optimizers.SGD(learning_rate = 0.01, momentum = 0.9, nesterov = True, decay = 0.001)
-#     model.compile(optimizer = optimizer, loss = "sparse_categorical_crossentropy", metrics = ["accuracy"])
+    model = keras.models.Model(inputs = VGG.input, outputs = output)
     
     ## VGG
     optimizer = keras.optimizers.Adam(learning_rate = 0.0001)
