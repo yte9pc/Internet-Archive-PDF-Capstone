@@ -36,6 +36,6 @@ To run the image based approach following steps
   - *python cnn.py*
     - This will train a VGG16 model and save the model
 - Third run multiprocessingCNNPredict.py
-  - Modify line 15 to point to saved model
+  - Modify line 15 in cnnPredict.py to point to saved model
   - *python multiprocessingCNNPredict.py -d "path to png files" -o "path to save result" -f "resultName.csv" -p "# of processes (or let the script decide)"* 
     - This script will call cnnPredict.py and return a csv file with the prediction of each PDF 
