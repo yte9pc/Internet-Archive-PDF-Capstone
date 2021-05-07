@@ -1,4 +1,4 @@
-# USAGE python extract.py --i imagePath -o outputPath
+# USAGE python multiprocessingMetaText.py -d "path to input directory of pdfs" -o  "path to output directory to store png" -p "# of processes"
 from pdfToImage import pdfToPNG
 from pdfToImage import chunk
 from multiprocessing import Pool
