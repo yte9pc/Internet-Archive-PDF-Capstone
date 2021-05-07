@@ -13,4 +13,5 @@ their likelihood of being a research publication, and what stage of publication 
 abstract, manuscript, camera ready, OCR scan) the file represents. Ideally the tool would
 process hundreds of millions of files and be network (as opposed to CPU) bound.
 
-## Python Version 3.7.4
+## Environment 
+Python Version 3.7.4
