@@ -88,7 +88,7 @@ if __name__ == "__main__":
     
     
     earlyStop = keras.callbacks.EarlyStopping(patience = 5)
-    reduce_lr = val(monitor = 'val_loss', factor = 0.2,
+    reduce_lr = keras.callbacks.ReduceLROnPlateau(monitor = 'val_loss', factor = 0.2,
                                   patience = 3, min_lr = 0.000001)
     
     history = model.fit(train_ds,
