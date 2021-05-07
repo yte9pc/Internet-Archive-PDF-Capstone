@@ -22,10 +22,10 @@ from keras.callbacks import ReduceLROnPlateau
 from keras.layers import GlobalAveragePooling2D
 
 
-def split(img_height, img_width, batch_size):
+def split(img_height, img_width, batch_size, data_location):
     # Training Dataset
     train_ds = tf.keras.preprocessing.image_dataset_from_directory(
-      '/scratch/yte9pc/InternetArchive/Images/Train/',
+      data_location,
       validation_split = 0.2,
       subset = "training",
       seed = 49,
@@ -35,7 +35,7 @@ def split(img_height, img_width, batch_size):
     
     # Validation Dataset
     val_ds = tf.keras.preprocessing.image_dataset_from_directory(
-      '/scratch/yte9pc/InternetArchive/Images/Train/',
+      data_location,
       validation_split = 0.2,
       subset = "validation",
       seed = 49,
@@ -49,8 +49,8 @@ if __name__ == "__main__":
     num_classes = 2
     img_width, img_height = 256, 256
     batch_size = 32
-    
-    train_ds, val_ds = split(img_height, img_width, batch_size)
+    data_location = '/scratch/yte9pc/InternetArchive/Images/Train/'
+    train_ds, val_ds = split(img_height, img_width, batch_size, data_location)
     
     train_ds = train_ds.prefetch(buffer_size = batch_size)
     val_ds = val_ds.prefetch(buffer_size = batch_size)
