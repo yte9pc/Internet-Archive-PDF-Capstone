@@ -1,4 +1,4 @@
-# USAGE python extract.py --i imagePath -o outputPath
+# USAGE python multiprocessingMetaText.py -d "path to input directory of pdfs" -o  "path to output directory to store csv" -f "file name to save as (needs to be pkl)" -p "# of processes"
 from metaText import metaData
 from metaText import chunk
 from multiprocessing import Pool
