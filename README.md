@@ -14,6 +14,6 @@ abstract, manuscript, camera ready, OCR scan) the file represents. Ideally the t
 process hundreds of millions of files and be network (as opposed to CPU) bound.
 
 ## Environment 
-Python Version 3.7.4
-Tensorflow Version 2.3.1
-Keras Version 2.4.3
+- Python Version 3.7.4
+- Tensorflow Version 2.3.1
+- Keras Version 2.4.3
